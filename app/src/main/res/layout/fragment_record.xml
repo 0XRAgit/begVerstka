@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!-- Вставить яндекс карту  -->
+    <fragment
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/time_text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/geo_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_geo"
+        android:background="@android:color/transparent"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="14dp"
+        tools:text="@string/ready"
+        style="@style/regular_15sp_white"
+        android:background="@color/main_pink"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/bold_28sp_black"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/km_text"
+        tools:text="0:00" />
+
+    <TextView
+        android:id="@+id/km_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/regular_17sp_black"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/record_button"
+        tools:text="0.0 км" />
+
+    <ImageView
+        android:id="@+id/photo_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/ic_photo"
+        android:layout_marginStart="38dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/record_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/record_button" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/record_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="@string/next"
+            style="@style/record_button"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_next_button"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/finish_button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="@string/finish"
+            style="@style/record_button"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/record_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:text="@string/start"
+        style="@style/record_button"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/mice_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/ic_mice"
+        android:layout_marginEnd="38dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/record_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/record_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
