@@ -11,4 +11,15 @@
     <string name="ready">Готово</string>
     <string name="stopped">Приостановлено</string>
     <string name="voice_record">Голосовая запись</string>
+    <string name="back">Назад</string>
+    <string name="new_track">Новый трек</string>
+    <string name="delete">Удалить</string>
+    <string name="track_name">Название трека</string>
+    <string name="track_description">Описание трека</string>
+    <string name="save">Сохранить</string>
+    <string name="havent_title">У вас нет записей</string>
+    <string name="havent_text">Ваше записи треков будут\nнаходиться тут</string>
+    <string name="edit">Редактировать</string>
+    <string name="gallery">Галерея</string>
+    <string name="change">Заменить</string>
 </resources>
